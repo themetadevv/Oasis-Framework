@@ -1,0 +1,10 @@
+.vs/
+bin/
+
+#Files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.pch
+*.ipch
