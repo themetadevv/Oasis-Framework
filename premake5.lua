@@ -8,7 +8,7 @@ workspace "OasisFramework"
 		"Distribution"
 	}
 
-	startproject "Game1"
+	startproject "Pong"
 
 outputdir = "%{cfg.system}/%{cfg.buildcfg}"
 build_dir = "bin/builds/" ..outputdir.. "/%{prj.name}"
@@ -33,7 +33,7 @@ project "OasisFramework"
 	objdir(intermediates_dir) -- obj dir
 
 	pchheader "oapch.h"
-	pchsource "Projects/OasisFramework/src/oapch.cpp"
+	pchsource "%{prj.name}/src/oapch.cpp"
 
 	files {
 		"%{prj.name}/src/**.h",
@@ -66,23 +66,23 @@ project "OasisFramework"
 		}	
 		
 		filter "configurations:Debug" 
-			defines "SBX_DEBUG"
+			defines "OASIS_DEBUG"
 			runtime "Debug"
 			symbols "On"	
 
 		filter "configurations:Release" 
-			defines "SBX_RELEASE"
+			defines "OASIS_RELEASE"
 			runtime "Release"
 			optimize "On"
 
 		filter "configurations:Distribution" 
-			defines "SBX_DISTRIBUTION"
+			defines "OASIS_DISTRIBUTION"
 			runtime "Release"
 			optimize "On"
 
--- Game1
-project "Game1"
-	location "Projects/Games/Game1" -- Create project inside this folder
+-- Pong
+project "Pong"
+	location "Projects/Games/Pong" -- Create project inside this folder
 	kind "ConsoleApp" -- Executable
 	language "C++"
 	staticruntime "Off"
@@ -121,16 +121,16 @@ project "Game1"
 		}	
 	
 	filter "configurations:Debug" 
-		defines "SBX_DEBUG"
+		defines "OASIS_DEBUG"
 		runtime "Debug"
 		symbols "On"	
 
 	filter "configurations:Release" 
-		defines "SBX_RELEASE"
+		defines "OASIS_RELEASE"
 		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Distribution" 
-		defines "SBX_DISTRIBUTION"
+		defines "OASIS_DISTRIBUTION"
 		runtime "Release"
 		optimize "On"

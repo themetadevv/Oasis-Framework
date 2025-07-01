@@ -7,8 +7,7 @@
 #include <Framework/Data.h>
 
 namespace OASFramework {
-	namespace Interface {
-		OASIS_INTERFACE __declspec(dllexport) IContextManager {
+	OASIS_INTERFACE OAPI IContextManager{
 		public:
 			virtual ~IContextManager() {}
 
@@ -22,6 +21,5 @@ namespace OASFramework {
 
 			virtual inline void SetVSync(bool val) = NULL;
 			virtual inline bool IsVSync() const = NULL;
-		};
-	}
+	};
 }
