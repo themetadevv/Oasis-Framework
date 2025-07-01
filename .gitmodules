@@ -1,0 +1,9 @@
+[submodule "Projects/OasisFramework/submodules/glfw"]
+	path = Projects/OasisFramework/submodules/glfw
+	url = https://github.com/themetadevv/glfw
+[submodule "Projects/OasisFramework/submodules/glm"]
+	path = Projects/OasisFramework/submodules/glm
+	url = https://github.com/g-truc/glm
+[submodule "Projects/OasisFramework/submodules/spdlog"]
+	path = Projects/OasisFramework/submodules/spdlog
+	url = https://github.com/gabime/spdlog

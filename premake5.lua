@@ -16,11 +16,11 @@ intermediates_dir = "bin/intermediates/" ..outputdir.. "/%{prj.name}"
 distributions_dir= "bin/distribution/"
 
 IncludeDirectories = {}
-IncludeDirectories["glfw"] = "Projects/OasisFramework/vendor/glfw/include"
-IncludeDirectories["spdlog"] = "Projects/OasisFramework/vendor/spdlog/include"
-IncludeDirectories["glm"] = "Projects/OasisFramework/vendor/glm"
+IncludeDirectories["glfw"] = "Projects/OasisFramework/submodules/glfw/include"
+IncludeDirectories["spdlog"] = "Projects/OasisFramework/submodules/spdlog/include"
+IncludeDirectories["glm"] = "Projects/OasisFramework/submodules/glm"
 
-include "Projects/OasisFramework/vendor/glfw"
+include "Projects/OasisFramework/submodules/glfw"
 
 -- ApplicationCoreDLL
 project "OasisFramework"
